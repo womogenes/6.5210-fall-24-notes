@@ -28,11 +28,11 @@ Extreme points
 - Take objective function to be the sum of all $x_i$ that are tight in the BFS. This sum is 0.
 - Take any other $x'$ that is feasible; we claim it is not optimal.
 	- Differs on some of the inequality constraints, [**WHY? is it not possible for another feasible solution to have the same entries that are tight and differ in other, non-tight entries?**]\
-		- Because in the definition of BFS, $n$ linearly independent constraints are tight; thus we can go back from a value to the point.
+		- Suppose we have another point which is the same on the inequality constraints AND the equality constraints; since we have $n$ linearly independent equations, it must be the same as the original point.
 	- i.e. some entries in $x'$ are nonzero. Since all feasible solutions have nonnegative entries, some entries in $x'$ are have 
 
 Corollary: the optimum of a linear program can be written in polynomial space.
-*Proof.* the optimum is tight at $n$ linearly independent constraints (i.e. $n$ rows of $A$, denote as $A'$). Then $A'x = b'$ for $n$ linearly independent rows.
+*Proof.* the optimum is tight at $n$ linearly independent constraints (i.e. $n$ rows of $A$, denote as $A'$). Then $A'x = b'$ for $n$ linearly independent rows.  
 - So we have $x = (A')^{-1} b'$, which is of polynomial size.
 
 **Algorithm.** Look through all $\binom{m}{n}$ subsets of $n$ constraints.
