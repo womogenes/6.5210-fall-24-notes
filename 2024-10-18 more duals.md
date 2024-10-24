@@ -1,0 +1,1 @@
+When taking duals (assume we're converting a minimization LP to a maximization LP), the "sign constraints" on the variables don't count as constraints.

@@ -11,6 +11,8 @@ What did we show last time?
 	- Rewrite as $c_i x_i = (yA_i x_i)$
 	- Rewrite as $cx = yb$
 	- If we have "complementary slackness" , i.e. $(c_i - yA_i)x_i = 0$, we get that $cx = yb$ so we're good
+
+![[Pasted image 20241019181800.png | 400]]
 ## Formalize
 Consider the optimum for the LP:
 - minimize $yb$
