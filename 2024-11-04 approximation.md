@@ -48,7 +48,7 @@ Linear programming
   $$x_i \in \{0, 1\}$$
 - Objective: $\min \sum x_i$
 - Cover:
-  $$ x_i + x_j \ge 1 \quad \forall\, (i, j) \in E $$
+  $$x_i + x_j \ge 1 \quad \forall\, (i, j) \in E $$
 
 Unfortunately we cannot specify $x_i \in \{0, 1\}$. So what if we just say $0 \le x_i \le 1$?
 - Constraining $x$ to an integer does not work because our analyses only apply to continuous $x$
@@ -92,10 +92,10 @@ Integer linear program:
 - $x_{ij}$ indicator variable for whether we assign client $i$ to facility $i$
 - Goal: minimize $\sum_i f_i y_i + \sum_{ij} c_{ij} x_{ij}$
 - Constraints:
-  $$ \sum_i x_{ij} \ge 1 \quad \forall\ j $$
-  because that constraints one of the $x_ij$ to be one
+  $$\sum_i x_{ij} \ge 1 \quad \forall\ j $$
+  because that constraints one of the $x_{ij}$ to be one
 - We also need
-  $$ x_{ij} \le y_i \quad \forall\ i,j $$
+  $$x_{ij} \le y_i \quad \forall\ i,j $$
   because we cannot assign folks to closed facilities
 
 Relax to regular linear program
@@ -112,9 +112,9 @@ Relax to regular linear program
 			- Throw this fraction away (set $x_{ij} \rightarrow 0$)
 			- Also scale the $x_{ij}$ up by $1 - \frac1\rho$ to compensate and ensure the sum condition
 			- Also scale up the $y_i$ by $1 - \frac1\rho$ so that they still exceed the $x_{ij}$
-		- Now the remaining $x_{ij}$ are small, i.e. less than $\rho C_j$. If we assign $x_{ij} \rightarrow 1$, we increase by a factor of at most $\rho$
+		- Now the remaining $c_{ij}$ are small, i.e. less than $\rho C_j$. If we assign $x_{ij} \rightarrow 1$, we increase by a factor of at most $\rho$
 		- Now we can assign each $j$ to **any** open $i$ with $x_{ij} > 0$ and pay at most $p \sum C_j$
-			- [**WAIT WHAT**] shouldn't it be $1 - \frac1/\rho$
+			- [**WAIT WHAT**] shouldn't it be $1 - \frac1\rho$
 		- Total assignments is $\le \rho \sum C_j$
 		- Facility opening
 			- If all the $y_i$s are small, we're screwed... so we need to combine facilities together
