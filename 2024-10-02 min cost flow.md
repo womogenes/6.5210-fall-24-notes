@@ -76,7 +76,7 @@ Overall, this algorithm runs $O(nm^2 UC)$ or $O(m^2 \sqrt{n}\,CU\log C)$
 				- There is no capacity left from $v$ going to $w$.
 				- Or $p(w) \le p(v) + c(vw)$ ("triangle inequality")
 
-- **Definition.** "reduced cost" $c_p(vw) = c(vw) + p(v) - p(w)$.
+- **Definition.** "reduced cost" $c_p(vw) = c(vw) + p(v) - p(w)$. 
 	- This is the cost to buy at $v$, ship to $w$, then sell to $w$.
 - **Definition**. a price function is *feasible* for a (residual) graph if no residual arc has negative reduced cost.
 - Observation: min cost flow is the same under the reduced costs as the original costs.

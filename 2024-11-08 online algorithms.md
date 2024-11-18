@@ -110,4 +110,3 @@ Consider $\sigma$ and break it into intervals of $k+1$ faults (misses)
 	- $k+1$ faults $\implies$ $k+1$ distinct page requests
 	- With these requests, OPT can't keep all of them in memory, so one of them must be a fault
 	- Thus we have a ratio of $(k+1)/1 \approx k$.
-	- 
